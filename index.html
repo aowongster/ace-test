@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>ACE in Action</title>
+    <style type="text/css" media="screen">
+        #editor {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="editor">function foo(items) { 
+    var x = "All these are syntax highlighted"; 
+    return x; 
+}
+        </div>
+
+    </div>
+    
+    <script src="ace-builds/src-min-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        // var beautify = ace.require("ace/ext/beautify"); // get reference to extension
+        var editor = ace.edit("editor");
+        editor.setTheme("ace/theme/monokai");
+        editor.session.setMode("ace/mode/javascript");
+        
+        // todo write your own beautify function
+        // beautify.beautify(editor.session);
+        function format() {
+            // beautify.beautify(editor.session);            
+            console.log('formatting')
+        }
+
+
+    </script>
+</body>
+
+</html>
